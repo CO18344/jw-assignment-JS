@@ -1,2 +1,2 @@
 ## JavaScript Assignment
-Calulator
+Calculator
