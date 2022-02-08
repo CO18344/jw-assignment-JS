@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<head>
+    <title>Selfie</title>
+
+    <style>
+        .window{
+            display: flex;
+        }
+
+        .selfie-container{
+            width: 100%;
+            background-color: rgb(112,140,180);
+        }
+
+        .selfie-container img{
+            width: 480px;
+            height: 640px;
+            display: block;
+            margin: 30px auto;
+        }
+
+        .shrink-expand{
+            transition: width 0.25s;
+        }
+
+        .nav-container{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30%;
+            background-color: rgb(136,180,220);
+            overflow: hidden;
+        }
+
+        .toggled-bar{
+            position: relative;
+            width: 35px;
+            border: black solid 0.5px;
+            background-color: rgb(136,180,220);
+        }
+
+        .nav-container > img, .toggled-bar > img{
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            right: 2px;
+            top: 2px;
+        }
+
+        .toggled-bar-hide{
+            display: none;
+        }
+
+        .nav-container>div{
+            cursor: pointer;
+            height: 100px;
+            background-color: rgb(216,220,252);
+            border: black solid 0.5px;   
+        }
+
+        .nav-container>div:hover{
+            background-color: rgb(200,230,255);
+        }
+
+        .nav-container>div:active{
+            background-color: rgb(150,150,255);
+        }
+
+        .nav-container>div>p{
+            font-family: cursive;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        #nav-header{
+            cursor: default;
+            background-color: white;
+        }
+
+        #nav-header > p> img{
+            width: 250px;
+            height: 50px;  
+        }
+
+       
+ 
+    </style>
+</head>
+
+<body>
+    <div class="window">
+        <div class="nav-container shrink-expand">
+            <img src="./minus.png" alt="">
+            <div id="nav-header">
+                <p><img src="./logo.png" alt=""></p> 
+            </div>
+            <div>
+                <p>Dashboard</p>
+            </div>
+            <div>
+                <p>Drivers</p>
+            </div>
+            <div>
+                <p>Customers</p>
+            </div>
+            <div>
+                <p>All Vehicles</p>
+            </div>
+            <div>
+                <p>Settings</p>
+            </div>
+
+        </div>
+        
+        <div class="toggled-bar toggled-bar-hide">
+            <img src="./plus.png" alt="">
+        </div>
+        
+        <div class="selfie-container">
+            <!-- <img src="https://drive.google.com/uc?export=view&id=1KyqMrpiIRtharvGUDCdlQjjhkr-_5_Kk"> -->
+            <img src=".\selfie.jpg">
+        </div>    
+    </div>
+    <script src=".\main.js"></script>
+    <!-- <a href="https://www.flaticon.com/free-icons/cross" title="cross icons">Cross icons created by Ilham Fitrotul Hayat - Flaticon</a> -->
+</body>
+
+</html>
